@@ -1,0 +1,286 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+body {
+  font:
+    14px/1.4 system-ui,
+    sans-serif;
+  color: #1c2330;
+  background: #f4f6fa;
+}
+button {
+  font: inherit;
+  cursor: pointer;
+}
+.login {
+  max-width: 380px;
+  margin: 15vh auto;
+  text-align: center;
+  padding: 0 16px;
+}
+.err {
+  color: #b3261e;
+  background: #fdecea;
+  padding: 8px;
+  border-radius: 6px;
+}
+.gbtn {
+  padding: 10px 20px;
+  border: 1px solid #c5cad3;
+  border-radius: 8px;
+  background: #fff;
+  font-weight: 600;
+}
+.gbtn:hover {
+  background: #f0f3f8;
+}
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  padding: 8px 12px;
+  background: #fff;
+  border-bottom: 1px solid #dde2ea;
+}
+.bar input,
+.bar select {
+  padding: 6px 8px;
+  border: 1px solid #c5cad3;
+  border-radius: 6px;
+  font: inherit;
+}
+.bar button {
+  padding: 6px 10px;
+  border: 1px solid #c5cad3;
+  border-radius: 6px;
+  background: #fff;
+}
+.sp {
+  flex: 1;
+}
+.user {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.user img,
+.av {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.av {
+  background: #5b6ee1;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 12px;
+  flex: none;
+}
+.sbox {
+  position: relative;
+  flex: 1;
+  min-width: 200px;
+  max-width: 360px;
+}
+.sbox input {
+  width: 100%;
+}
+.res {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  max-height: 50vh;
+  overflow: auto;
+  background: #fff;
+  border: 1px solid #c5cad3;
+  border-radius: 6px;
+  box-shadow: 0 6px 18px #0002;
+}
+.res button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  border: 0;
+  border-bottom: 1px solid #eef0f4;
+  background: none;
+  padding: 8px;
+}
+.res button:hover {
+  background: #f0f3f8;
+}
+.res small,
+.card small {
+  display: block;
+  color: #5d6678;
+}
+.view {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  cursor: grab;
+  touch-action: none;
+}
+.canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-origin: 0 0;
+}
+.node {
+  display: flex;
+  align-items: center;
+}
+.kids {
+  display: flex;
+  flex-direction: column;
+  margin-left: 36px;
+  border-left: 2px solid #b8c0cf;
+  padding: 0;
+}
+.kids > .node {
+  position: relative;
+  padding: 5px 0 5px 20px;
+}
+.kids > .node::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 20px;
+  border-top: 2px solid #b8c0cf;
+}
+.kids > .node:first-child {
+  margin-top: 0;
+}
+.root-link {
+  width: 36px;
+  border-top: 2px solid #b8c0cf;
+}
+.card {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  width: 270px;
+  padding: 8px;
+  background: #fff;
+  border: 1px solid #dde2ea;
+  border-left: 5px solid;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+}
+.card b {
+  display: block;
+}
+.card.ctx {
+  opacity: 0.55;
+  border-style: dashed;
+}
+.card.sel {
+  outline: 3px solid #f5a623;
+}
+.card em {
+  font-size: 11px;
+  color: #8a6d00;
+}
+.tog {
+  position: absolute;
+  right: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+  min-width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  border: 1px solid #8b95a8;
+  background: #fff;
+  z-index: 2;
+  font-size: 12px;
+}
+.side {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 340px;
+  max-width: 100%;
+  background: #fff;
+  border-left: 1px solid #dde2ea;
+  padding: 16px;
+  overflow: auto;
+  z-index: 30;
+  box-shadow: -6px 0 18px #0002;
+}
+.side dt {
+  color: #5d6678;
+  font-size: 12px;
+  margin-top: 10px;
+}
+.side dd {
+  margin: 0;
+}
+.close {
+  float: right;
+}
+.msg {
+  padding: 40px;
+  text-align: center;
+}
+.zoom {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  display: flex;
+  gap: 6px;
+  z-index: 5;
+}
+.zoom button {
+  width: 34px;
+  height: 34px;
+  border: 1px solid #c5cad3;
+  border-radius: 6px;
+  background: #fff;
+}
+@media (max-width: 640px) {
+  .card {
+    width: 220px;
+  }
+  .sbox {
+    max-width: none;
+    flex-basis: 100%;
+  }
+  .side {
+    width: 100%;
+  }
+}
+.kids {
+  position: relative;
+}
+.kids::before {
+  content: "";
+  position: absolute;
+  left: -38px;
+  top: 50%;
+  width: 38px;
+  border-top: 2px solid #b8c0cf;
+}

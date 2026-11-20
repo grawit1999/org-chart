@@ -1,0 +1,26 @@
+{
+  "name": "org-chart-mini-app",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "data": "node scripts/generate-employees.mjs"
+  },
+  "dependencies": {
+    "next": "14.2.15",
+    "next-auth": "4.24.10",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "20.14.10",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "autoprefixer": "^10.6.2",
+    "postcss": "^8.5.33",
+    "tailwindcss": "^3.4.17",
+    "typescript": "5.5.4"
+  }
+}
